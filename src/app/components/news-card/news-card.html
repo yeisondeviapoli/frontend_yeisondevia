@@ -1,0 +1,2 @@
+<p>news-card works!</p>
+<article class="card h-100 shadow-sm border-0"><img [src]="news().image" [alt]="news().title" class="card-img-top news-image"><div class="card-body d-flex flex-column"><span class="badge text-bg-primary align-self-start mb-2">{{news().category}}</span><h3 class="h5">{{news().title}}</h3><p class="text-secondary flex-grow-1">{{news().description}}</p><a class="btn btn-outline-primary" [routerLink]="['/noticias',news().id]">Ver más <i class="bi bi-arrow-right"></i></a></div></article>

@@ -1,0 +1,2 @@
+<p>favorites works!</p>
+<div class="container py-5"><h1 class="fw-bold">Mis favoritos</h1><p class="text-secondary">Noticias guardadas en este dispositivo.</p><div class="row g-4" *ngIf="service.items().length; else empty"><div class="col-md-6 col-lg-4" *ngFor="let n of service.items()"><app-news-card [news]="n" /></div></div><ng-template #empty><div class="alert alert-info">Aún no tienes favoritos. Explora las noticias y guarda tus historias preferidas.</div></ng-template></div>
