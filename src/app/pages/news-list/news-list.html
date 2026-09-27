@@ -1,2 +1,2 @@
-<p>news-list works!</p>
-<div class="container py-5"><span class="eyebrow">CATÁLOGO</span><h1 class="fw-bold mb-4">Todas las noticias</h1><div class="row g-4"><div class="col-md-6 col-lg-4" *ngFor="let n of service.items()"><app-news-card [news]="n" /></div></div></div>
+<div class="container py-5"><span class="eyebrow">CATALOGO · 10 HISTORIAS</span><h1 class="fw-bold mb-4">Noticias para descubrir</h1><div class="row g-4" *ngIf="service.items().length > 0; else loading"><div class="col-md-6 col-lg-4" *ngFor="let n of service.items()"><app-news-card [news]="n" /></div></div><ng-template #loading><div class="alert alert-info">Cargando las historias...</div></ng-template></div>
+
